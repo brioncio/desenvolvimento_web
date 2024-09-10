@@ -1,0 +1,11 @@
+.caixa {
+    margin-left: 0;
+    width: 400px;
+
+
+}
+
+.caixa p {
+    font-size: large;
+    word-spacing: 3px;
+}
