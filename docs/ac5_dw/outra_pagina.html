@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End</title>
+
+    <style>
+        body {
+            background-color: #B0C4DE;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        p {
+            color: #FF4500;
+            font-size: 6.5rem;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+            letter-spacing: 5px;
+            animation: fadeInUp 2s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            p {
+                font-size: 4.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            p {
+                font-size: 3rem;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <p>Obrigado pelo seu tempo!</p>
+</body>
+</html>

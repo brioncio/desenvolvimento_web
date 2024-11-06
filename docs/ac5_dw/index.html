@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com Upload de Imagem</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="contentContainer">
+
+        <h1>Formulário de Contato</h1>
+
+        <form id="contactForm">
+            <div class="form-group">
+                <div class="labelFormContainer">
+                    <label for="name">Nome:</label>
+                    <span class="tooltip">*</span>
+                </div>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <div class="labelFormContainer">
+                    <label for="email">Email:</label>
+                    <span class="tooltip">*</span>
+                </div>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <div class="labelFormContainer">
+                    <label for="message">Mensagem:</label>
+                    <span class="tooltip">*</span>
+                </div>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <div class="labelFormContainer">
+                    <label for="phone">Telefone:</label>
+                    <span class="tooltip">*</span>
+                </div>
+                <input type="text" id="phone" name="phone" placeholder="(XX) XXXXX-XXXX" required>
+            </div>
+
+            <div class="form-group">
+                <div class="labelFormContainer">
+                    <label for="subject">Assunto:</label>
+                    <span class="tooltip">*</span>
+                </div>
+                <select id="subject" name="subject" required>
+                    <option value="">Selecione...</option>
+                    <option value="elogio">Elogio</option>
+                    <option value="reclamacao">Reclamação</option>
+                    <option value="sugestao">Sugestão</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="file">Upload de imagem:</label>
+                <input type="file" id="file" name="file" accept="image/*">
+                <div id="imagePreview"></div>
+                <button type="button" id="removeImageButton" style="display:none;">Remover imagem</button>
+                <button type="button" id="viewImageButton" style="display:none;" onclick="window.open(imagePreview.querySelector('img').src, '_blank');">Visualizar imagem</button>
+            </div>
+
+            <button type="submit" id="submitButton" disabled>Enviar</button>
+        </form>
+
+        <div id="result"></div>
+        <div id="spinner" style="display: none;">Carregando...</div>
+    </div> 
+
+    <script src="index.js"></script>
+
+</body>
+</html>

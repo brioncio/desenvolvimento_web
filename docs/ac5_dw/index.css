@@ -1,0 +1,198 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #B0C4DE;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    color: #FF4500;
+    padding: 3rem;
+    font-weight: bolder;
+    font-size: 3rem;
+    font-family: 'CustomFont';
+}
+
+form {
+    background: #E1EBEE;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+                0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    max-height: 80vh;
+    overflow-y: auto;
+    transition: box-shadow 0.3s ease;
+    font-weight: 600;
+}
+
+.contentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.labelFormContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tooltip {
+    color: #CC0000;
+    font-weight: bolder;
+}
+
+.tooltip::after {
+    content: "Campo obrigatório";
+    position: absolute;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    font-size: 12px;
+}
+
+.tooltip:hover::after {
+    visibility: visible;
+    opacity: 1;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+input[type="file"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #3474c9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+
+button[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    position: relative;
+}
+
+button[type="submit"]:disabled::after {
+    content: "Complete o formulário";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+button[type="submit"]:disabled:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+    background-color: #CC0000;
+}
+
+#result {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 8px;
+    display: none;
+    width: 100%;
+    max-width: 400px;
+    transition: opacity 0.5s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#result.show {
+    display: block;
+    opacity: 1;
+}
+
+#result.error {
+    background-color: #f44336;
+}
+
+#result p {
+    margin: 0;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+#spinner {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#imagePreview {
+    margin-top: 20px;
+    text-align: center;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+#imagePreview img {
+    max-width: 100%;
+    max-height: 300px;
+    height: auto;
+    border-radius: 4px;
+}
+
+#removeImageButton {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #FF6347;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#removeImageButton:hover {
+    background-color: #FF4500;
+}
